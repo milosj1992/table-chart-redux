@@ -1,0 +1,54 @@
+.modal-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.modal-rent {
+    z-index: 105;
+}
+
+.rent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rent-list .ui.horizontal.list {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.ui.horizontal.list .item {
+    width: 18%;
+}
+
+.ui.horizontal.list .right.floated.content {
+    width: 28%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ui.horizontal.list .item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.ui.negative.button {
+    margin-right: 0;
+}
+
+@media (max-width: 759px) {
+    .ui.horizontal.list .right.floated.content a {
+        margin-bottom: 5px;
+    }
+}

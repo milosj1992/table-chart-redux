@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import RentList from "./components/RentList";
+import RentDelete from "./components/RentDelete";
+import RentEdit from "./components/RentEdit";
+import RentCreate from "./components/RentCreate";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className="ui container">
+                <Routes>
+                    <Route path="/" exact element={<RentList/>}/>
+                    <Route path="/rents/new" exact element={<RentCreate/>}/>
+                    <Route path="/rents/edit/:id" exact element={<RentEdit/>}/>
+                    <Route path="/rents/delete/:id" exact element={<RentDelete/>}/>
+                </Routes>
+            </div>
+        </BrowserRouter>
+
+    )
 }
 
 export default App;
